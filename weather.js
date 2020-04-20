@@ -46,16 +46,16 @@ function showResults(data){
             "<h3 style='padding-left:40px;'><strong>Min Temperature</strong>: "+data.main.temp_min+"&deg;C</h3>"+
             "<h3 style='padding-left:40px;'><strong>Max Temperature</strong>: "+data.main.temp_max+"&deg;C</h3>"+
             "<h3 style='padding-left:40px;'><strong>Wind Speed</strong>: "+data.wind.speed+"m/s</h3>"+
-            "<h3 style='padding-left:40px; padding-bottom:30px;'><strong>Wind Direction</strong>: "+data.wind.deg+"&deg;</h3>";
+            "<h3 style='padding-left:40px; padding-bottom:30px;'><strong>Time Zone</strong>: "+data.timezone+";</h3>";
+            
+            
 }
 
 
-currentTime.textContent = ( moment().tz(timeZone).format('dddd') + ', ' + moment().tz(timeZone).format('hh:mm a') )
-            day2day.textContent = moment().tz(timeZone).add(1, 'd').format('dddd')
-            day3day.textContent = moment().tz(timeZone).add(2, 'd').format('dddd')
-            day4day.textContent = moment().tz(timeZone).add(3, 'd').format('dddd')
+const moment = require('moment');
 
-
+let now = moment();
+console.log(now.format());
 
             
 
